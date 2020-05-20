@@ -22,7 +22,7 @@ Uploads TestStand ATML report files into SystemLink Test Module
 1. **Upload** ATML to Test Monitor
 
 ### Upload
-[Atml2TestMonitor.py](Atml2TestMonitor.py) - upload HTAP TDMS files to Test Monitor
+[Atml2TestMonitor.py](Atml2TestMonitor.py) - upload TestStand ATML files to Test Monitor
 
 #### Usage
 Two options:
