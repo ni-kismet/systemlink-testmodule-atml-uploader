@@ -1,5 +1,5 @@
-# TDR Conversion <!-- omit in toc -->
-This is home to scripts for working with manufacturing TDR files.
+# ATML Uploader <!-- omit in toc -->
+This is home to scripts for uploading TestStand ATML report files into SystemLink Test Module.
 
 - [Getting Started](#getting-started)
 - [Overview](#overview)
@@ -13,13 +13,13 @@ This is home to scripts for working with manufacturing TDR files.
 2. Install [Python 3.x](https://www.python.org/ftp/python/3.7.1/python-3.7.1-amd64.exe)
 3. Open a command prompt at the root repo directory
 4. Run "python -m pip install -r [requirements.txt](requirements.txt)"
-5. Use the [intended workflow](#intended-workflow) to work with TDR files
+5. Use the [intended workflow](#intended-workflow) to work with ATML files
 
 ## Overview
 Uploads TestStand ATML report files into SystemLink Test Module
 
 ## Intended workflow:
-1. **Upload** TDMS to Test Monitor
+1. **Upload** ATML to Test Monitor
 
 ### Upload
 [Atml2TestMonitor.py](Atml2TestMonitor.py) - upload HTAP TDMS files to Test Monitor
