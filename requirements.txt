@@ -1,0 +1,5 @@
+npTDMS==0.15.1
+requests
+pandas
+pympler>=0.7
+engineering-notation
