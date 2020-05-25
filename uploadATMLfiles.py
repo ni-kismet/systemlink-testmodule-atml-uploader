@@ -19,8 +19,6 @@ from typing import List
 
 pp = pprint.PrettyPrinter(indent=2)
 
-# header = {"X-NI-Auth-Method": 'Basic', "Authorization": 'Basic YWRtaW46YWRtaW4='}
-# header = {  "Authorization": 'Basic YWRtaW46bGFidmlldz09PQ==',
 header = { "content-type": 'application/json' }
 protocol = 'http'
 debug = False
@@ -305,10 +303,10 @@ if __name__ == "__main__":
 
     if debug:
             args.quiet = False
-            args.source = r"E:\TDMSFiles"
+            args.source = r"C:\TEMP\TDMSFiles"
             args.server = "localhost:9090"
             args.username = "admin"
-            args.password = "labview==="
+            args.password = "password"
 
     show_console = not args.quiet
 
