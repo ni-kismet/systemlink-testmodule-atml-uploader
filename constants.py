@@ -1,12 +1,6 @@
-# MASTER_NAME = 'alex-w-2018'
-# MASTER_NAME = 'wadshtapvm'
-# MASTER_NAME = '10.192.40.6'
+
 MASTER_NAME = 'localhost:9090'
-# MASTER_NAME = 'jprewitt5:9090'
-# MASTER_NAME = '10.2.35.13:9090'
-# ip-10-192-40-46.aws.natinst.com'
-MASTER_AUTH = ('admin', 'admin')
-# MASTER_AUTH = ('admin', 'labview===')
+MASTER_AUTH = ('admin', 'password')
 
 TEST_MONITOR_SVC_URLS = dict(
     base='http://{0}/nitestmonitor',
