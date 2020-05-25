@@ -23,7 +23,7 @@ header = { "content-type": 'application/json' }
 protocol = 'http'
 debug = False
 
-temp_tdms_dir = str(Path(tempfile.gettempdir()).joinpath('TDMS_Files'))
+temp_tdms_dir = str(Path(tempfile.gettempdir()).joinpath('ATML_Files'))
 
 # create logger with 'spam_application'
 logger = logging.getLogger(__name__)
@@ -164,7 +164,7 @@ class FileProcessFunctor(object):
     def __call__(self, file_path):
         _process_file(file_path, self.server, self.user_name, self.password, self.protocol, duplicate_mode=self.duplicate_mode)
 
-def upload_tdms_files(file_paths:[str], server: str=None, user_name:str=None, password:str=None, protocol:str='http', num_processes:int=1, log_file='uploadTDMSfiles.log', log_level='WARNING', show_console:bool=False, duplicate_mode:str='skip'):
+def upload_tdms_files(file_paths:[str], server: str=None, user_name:str=None, password:str=None, protocol:str='http', num_processes:int=1, log_file='uploadATMLfiles.log', log_level='WARNING', show_console:bool=False, duplicate_mode:str='skip'):
     if log_file != "":
         #  if debug else logging.WARNING)
         # create file handler which logs even debug messages
@@ -271,7 +271,7 @@ def filter_folder(folder:str, extensions:List[str], file_filters:List[str]=[''],
 
     return file_paths
 
-def upload_tdms_folder(source_folder:str, server: str=None, user_name:str=None, password:str=None, protocol:str='http', num_days:int=-1, last_day:str='now', max_files:int=-1, num_processes:int=8, log_file:str='uploadTDMSfiles.log', log_level:str='WARNING', show_console:bool=False, file_filters:list=[''], duplicate_mode:str='skip'):
+def upload_tdms_folder(source_folder:str, server: str=None, user_name:str=None, password:str=None, protocol:str='http', num_days:int=-1, last_day:str='now', max_files:int=-1, num_processes:int=8, log_file:str='uploadATMLfiles.log', log_level:str='WARNING', show_console:bool=False, file_filters:list=[''], duplicate_mode:str='skip'):
     t1 = perf_counter()
     extensions = ['tdms']
     if show_console:
@@ -287,7 +287,7 @@ if __name__ == "__main__":
     parser.add_argument('-d', '--days', default=-1, type=int, help='number of days to process starting from the most recent file')    
     parser.add_argument('--lastday', default='now', type=str, help='the day to start reverse-processing files. Options are "now", "last", or a day in YYYY-MM-DD format')
     parser.add_argument('--filecount', default=-1, type=int, help='number of files to process')
-    parser.add_argument('-l', '--logfile', default=str(Path(tempfile.gettempdir()).joinpath('uploadTDMSresults.log')), help='log file to be created or overwritten')
+    parser.add_argument('-l', '--logfile', default=str(Path(tempfile.gettempdir()).joinpath('uploadATMLresults.log')), help='log file to be created or overwritten')
     parser.add_argument('--loglevel', default='WARNING', help='level to log from most verbose to least', choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"])
     parser.add_argument('--consolelevel', default='INFO', help='level to output to stdout from most verbose to least', choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"])
     parser.add_argument('-q', '--quiet', action="store_true", help="no console output including progress, overrides consolelevel")
@@ -303,7 +303,7 @@ if __name__ == "__main__":
 
     if debug:
             args.quiet = False
-            args.source = r"C:\TEMP\TDMSFiles"
+            args.source = r"C:\TEMP\ATML_Files"
             args.server = "localhost:9090"
             args.username = "admin"
             args.password = "password"
