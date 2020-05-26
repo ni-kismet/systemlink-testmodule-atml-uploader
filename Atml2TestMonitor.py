@@ -508,10 +508,10 @@ if __name__ == "__main__":
     # if debugging bypass the command line
     if debug:
         args.quiet = False
-        args.source = r"C:\repos\battery-tester\Cycle Test"
-        args.server = "ni-mfg:9090"
+        args.source = r"C:\Temp\ATML_Files"
+        args.server = "localhost:9090"
         args.username = "admin"
-        args.password = "labview==="
+        args.password = "password"
         args.loglevel = "DEBUG"
         args.consolelevel = "WARNING"
         # args.days = 1
